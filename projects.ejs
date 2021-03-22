@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+<body>
+<style>
+ 
+
+
+.home {
+position:absolute;
+top: 10px;
+right: 120px;
+font-size: 100px;
+}
+
+.info {
+position:absolute;
+top: 10px;
+right: 85px;
+font-size: 100px;
+}
+.logout {
+position:absolute;
+top: 10px;
+right: 20px;
+font-size:15px;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+ 
+
+ 
+body {
+  background-image:url(" https://w.wallhaven.cc/full/39/wallhaven-39mxkv.png");
+         background-size: 1560px;
+         
+}
+.edit {
+position:absolute;
+top: 10px;
+right: 100px;
+ 
+font-size:15px;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.home {
+position:absolute;
+top: 10px;
+right: 190px;
+ 
+font-size:15px;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+  
+div.polaroid {
+  
+  width: 9%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 20px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+} 
+ 
+  
+.closebutton {
+position:absolute;
+bottom: 100px;
+left: 450px;
+ 
+font-size:15px;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+</style>
+ 
+<table id="table" >  
+<thread>  
+<tr>    
+<form method="GET", action="http://localhost:8000/">     
+</tr>  
+
+<center>
+
+    
+  <h2>projects </h2>   
+</center>
+ 
+</thead>  
+<tbody>
+    <div class="container">
+     
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Duration</th>
+                <th>Objective</th>
+                <th>Tools</th>
+                 
+                <th>Outcome</th>
+                 
+               
+              </tr>
+            </thead>
+    
+         
+
+            <div class="container"> 
+        <table class="table table-striped">
+        <% projects.forEach(function (projects) { %>  
+       <tr> 
+       
+        <td><%=  projects.Topic%>  &emsp; &emsp;   </td> 
+        <td> <%= projects.Duration%>   &emsp; &emsp; &emsp;     </td>
+        <td> <%= projects.Objective%>   </td> 
+        <td> <%= projects.Tools%>   </td> 
+        <td> <%= projects.Outcome%>   </td> 
+         
+      </tr> 
+                
+        <% }) %>
+ 
+
+  
+</tbody>
+</table>
+
+ 
+<button type="button" class="closebutton" onclick=window.close();>Close</button>
+      
+</body>
+
+ 
+</html>
