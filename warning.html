@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{
+    
+  background-image:url(" https://w.wallhaven.cc/full/39/wallhaven-39mxkv.png");
+         background-size: 1560px;
+         
+}
+
+.button {
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 8px;
+  width: 80px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<title>Document</title>
+<form method="GET", action="http://localhost:8000/">      
+</head>
+<body>
+ 
+    
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack()
+        {
+             
+            window.onbeforeunload = function() { return "Your work will be lost."; };
+        }
+    </script>
+    
+    <body onLoad="noBack();" onpageshow="if (event.persisted) noBack();" onUnload="">
+    
+
+<center>
+ 
+<h1>Do you want to logout for sure ? </h1><br> </br>
+
+<button  class="button" formaction="/logout"><span>yes</span></button> 
+<button   class="button" formaction="/data"><span>no</span></button> 
+</div>
+</center>  
+
+
+<script type = "text/javascript" >
+function preventBack() { window.history.forward(); }
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
+</script>
+</body>
+</html>

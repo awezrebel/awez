@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  <style>
+     body {
+        background-image:url(" https://w.wallhaven.cc/full/39/wallhaven-39mxkv.png");
+         background-size: 1560px;
+        }
+.button {
+font-size:15px;
+  border-radius: 3px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 7px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+  </style>
+ 
+  <div class="w3-container w3-peach">
+ <center>
+  <h2>Password Recovery</h2>
+ </center>
+
+  </div>
+   <form method="GET", action="http://localhost:8000/">     
+
+  <center>
+ 
+
+  
+    <p>      
+      <label class="w3-text-black" ><b>OTP:</b></label>
+      <input class="w3-sand"  name="otp"  size="30" type="text" required></p>
+    <p>
+      <p>      
+        <label class="w3-text-black"  ><b>User name:</b></label>
+        <input class="w3-sand" name="uname1" size="25" type="text"></p>
+        <p>  
+    <p>      
+      <label class="w3-text-black"  ><b>password:</b></label>
+      <input size="25" class="w3-sand" name="pwd"   type="text"></p>
+    <p>
+    <p>      
+      <label class="w3-text-black"><b>Confirm:</b></label>
+      <input class="  w3-sand" name="cpwd"  size="25" type="text"></p>
+    <p>
+     
+ 
+   
+        <div id="countdown"></div>
+        <button class="w3-button w3-orange"  id="mybutton" formaction="/otp"  >Resend OTP</button>  <br></br> 
+            <p>
+  
+        <a href="login.html" , class="w3-btn w3-orange">Cancel</a>  &nbsp; &nbsp;
+        <button  type="submit" , class="w3-btn w3-orange" >confirm</button> <br></br> 
+       <p></p>
+
+    </center>  
+ 
+<script>
+const htmlBtn=document.getElementById("mybutton");
+htmlBtn.disabled=true;
+</script>
+
+
+<script>
+alert("otp sent succesfully")
+var timeleft = 20;
+var downloadTimer = setInterval(function(){
+if(timeleft <= 0){
+clearInterval(downloadTimer);
+document.getElementById("countdown").innerHTML = " ",htmlBtn.disabled=false;
+} else {
+document.getElementById("countdown").innerHTML = timeleft ;
+}
+timeleft -= 1;
+}, 1000);
+
+</script>
+
+</form>
+ 
+
+</body>
+</html> 
